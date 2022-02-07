@@ -1,0 +1,19 @@
+import React from "react";
+
+import { useSelector } from "react-redux";
+
+export default function Message() {
+  const isShow = useSelector((state) => state.layout.showMessage);
+
+  return (
+    <React.Fragment>
+      {isShow && (
+        <div className="container mt-3">
+          <div className="alert alert-success" role="alert">
+            Cadastro realizado com Sucesso!!!
+          </div>
+        </div>
+      )}
+    </React.Fragment>
+  );
+}

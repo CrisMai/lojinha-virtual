@@ -1,0 +1,75 @@
+@import url('https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cerulean/bootstrap.min.css');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+html,
+body,
+#root {
+	height: 100%;
+}
+
+/** Layout **/
+
+.l-header {
+	grid-area: lheader;
+}
+
+.l-content {
+	grid-area: lcontent;
+}
+
+.l-footer {
+	grid-area: lfooter;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-color: rgb(233, 124, 124);
+	font-weight: bold;
+}
+
+#root {
+	display: grid;
+
+	grid-template-columns: 1fr;
+	grid-template-rows: 55px 1fr 55px;
+	grid-template-areas: 'lheader' 'lcontent' 'lfooter';
+}
+
+div .teste {
+	border: 3px solid hsla(185, 100%, 62%, 0.2);
+	border-top-color: #3cefff;
+	border-radius: 50%;
+	width: 3em;
+	height: 3em;
+	animation: spin 1s linear infinite;
+	margin: auto;
+	margin-top: 15%;
+  }
+  
+  @keyframes spin {
+	to {
+	  transform: rotate(360deg);
+	}
+  }
+
+  body {
+	background-color: #a1e5ee;
+  }
+  #login .container #login-row #login-column #login-box {
+	margin-top: 120px;
+	max-width: 600px;
+	height: 320px;
+	border: 1px solid #9C9C9C;
+	background-color: rgb(233, 124, 124);
+  }
+  #login .container #login-row #login-column #login-box #login-form {
+	padding: 20px;
+  }
+  #login .container #login-row #login-column #login-box #login-form #register-link {
+	margin-top: -85px;
+  }
+
+
+
+
+  

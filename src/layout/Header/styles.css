@@ -1,0 +1,28 @@
+i.fa {
+	color: #fff;
+	position: relative;
+}
+
+span.fa-counter {
+	position: absolute;
+	color: #333;
+	right: 10px;
+	top: 10px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.header {
+	background-color: rgb(233, 124, 124);
+	color: #495057 !important;
+	font-weight: bold;
+}
+
+.navbar-brand {
+	font-size: 180% !important;
+}
+
+.logout {
+	margin-left: 10px;
+}
+

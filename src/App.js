@@ -1,5 +1,4 @@
 import React from "react";
-
 import Layout from "./layout";
 import Pages from "./pages";
 import Message from "./components/Message";

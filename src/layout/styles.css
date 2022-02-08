@@ -56,9 +56,10 @@ div .teste {
 	background-color: #a1e5ee;
   }
   #login .container #login-row #login-column #login-box {
-	margin-top: 120px;
+	position: absolute;
+	margin-top: 100px;
 	max-width: 600px;
-	height: 320px;
+	height: auto;
 	border: 1px solid #9C9C9C;
 	background-color: rgb(233, 124, 124);
   }

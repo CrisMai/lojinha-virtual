@@ -43,7 +43,7 @@ export default function Add() {
           name="url"
           className="form-control"
           placeholder="URL:https://cars"
-          value={form.url}
+          value={form.cpf}
         />
       </div>
       <button type="submit" className="btn btn-primary">

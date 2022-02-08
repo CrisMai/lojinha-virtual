@@ -1,5 +1,37 @@
-.card img {
-	color: black;
+
+.card-img-top {
+	object-fit: contain;
+	height: 200px;
+	margin: 10px;
 }
+
+.card-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+[data-tooltip] {
+	font-weight: bold;
+  }
+  
+  [data-tooltip]:after {
+	display: none;
+	position: absolute;
+	top: -5px;
+	padding: 5px;
+	border-radius: 3px;
+	content: attr(data-tooltip);
+	background-color: #0095ff;
+	color: White;
+  }
+  
+  [data-tooltip]:hover:after {
+	display: block;
+  }
+
+
+
+
 
 

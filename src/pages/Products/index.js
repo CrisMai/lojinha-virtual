@@ -38,8 +38,8 @@ export default function Products() {
       <Header />
       <div className="container-fluid container">
         <div className="row">
-          {products.map((car, index) => (
-            <Product key={index} car={car} addItemCart={addItemCart} />
+          {products.map((product, index) => (
+            <Product key={index} product={product} addItemCart={addItemCart} />
           ))}
         </div>
         {/* {load ? <div className="teste"></div> : ""} */}

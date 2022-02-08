@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from 'react-router-dom'
 import { addUser } from "../../store/ducks/users";
 import { saveUser } from "../../store/fetchActions";
+import validaCPF from "../../util/validaCpf";
 import "./styles.css";
 
 
@@ -37,7 +38,8 @@ export default function RegisterUser() {
     },
     phone: "1-570-236-7033"
   }
-  const [message, setMessage] = useState(false);
+  const [msgSuccess, setMsgSuccess] = useState(false);
+  const [msgCpf, setMsgCPF] = useState(false);
 
   const users = useSelector((state) => state.users);
 
@@ -49,10 +51,19 @@ export default function RegisterUser() {
 
   useEffect(() => {
     dispatch(addUser(form));
-  }, []);
+  }, [dispatch]);
+
 
   function addNewUser(e) {
     e.preventDefault();
+    if (!validaCPF(form.cpf)) {
+      console.log("cpf invalido!")
+      setMsgCPF(true);
+      setTimeout(() => {
+        setMsgCPF(false);
+      }, 2000)
+      return false;
+    }
     dispatch(saveUser(userMock));
     dispatch(addUser(form));
     console.log(users);
@@ -63,12 +74,12 @@ export default function RegisterUser() {
       data: "",
       cpf: "",
     });
-    setMessage(true)
+    setMsgSuccess(true)
     setTimeout(() => {
-      setMessage(false);
-    }, 2500);
+      history.push("/products");
+      setMsgSuccess(false);
+    }, 1500);
   }
-
 
   function back() {
     history.push('/login');
@@ -83,7 +94,7 @@ export default function RegisterUser() {
             className="row justify-content-center align-items-center"
           >
             <div id="login-column" className="col-md-6 mt">
-              {message ? <div className="alert alert-success message-restier-user" role="alert">
+              {msgSuccess ? <div className="alert alert-success message-restier-user" role="alert">
                 Cadastro realizado com sucesso!
               </div> : ''}
               <div id="login-box" className="col-md-12 register-user">
@@ -102,6 +113,8 @@ export default function RegisterUser() {
                       name="nome"
                       id="nome"
                       className="form-control"
+                      value={form.nome}
+                      placeholder="Digite seu nome"
                       required
                     />
                   </div>
@@ -111,10 +124,12 @@ export default function RegisterUser() {
                     </label>
                     <input
                       onChange={formChange}
-                      type="text"
+                      type="email"
                       name="email"
                       id="email"
                       className="form-control"
+                      value={form.email}
+                      placeholder="Digite seu e-mail"
                       required
                     />
                   </div>
@@ -124,10 +139,13 @@ export default function RegisterUser() {
                     </label>
                     <input
                       onChange={formChange}
-                      type="text"
+                      type="password"
                       name="password"
                       id="password"
                       className="form-control"
+                      value={form.password}
+                      minlength="8"
+                      placeholder="Digite sua senha"
                       required
                     />
                   </div>
@@ -141,10 +159,14 @@ export default function RegisterUser() {
                       name="data"
                       id="data"
                       className="form-control"
+                      value={form.data}
                       required
                     />
                   </div>
                   <div className="form-group">
+                    {msgCpf ? <div className="alert alert-danger" role="alert">
+                      CPF inválido!
+                    </div> : ''}
                     <label htmlFor="cpf" className="text-info">
                       CPF:
                     </label>
@@ -154,6 +176,8 @@ export default function RegisterUser() {
                       name="cpf"
                       id="cpf"
                       className="form-control"
+                      placeholder="Digite seu CPF"
+                      value={form.cpf}
                       required
                     />
                   </div>

@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function ItemCart({item, removeItemCarrinho}) {
+export default function ItemCart({ item, removeItemCarrinho }) {
   return (
-    <div className="col-sm-3 mt-3">   
+    <div className="col-sm-3 mt-3">
       <div className="card text-white bg-primary mb-3">
         <div className="card-header">{item.title}</div>
         <div className="card-body" style={{ padding: 1 }}>

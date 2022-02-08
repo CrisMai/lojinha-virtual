@@ -60,6 +60,7 @@ export default function Login() {
                       name="email"
                       id="email"
                       className="form-control"
+                      placeholder="Digite seu e-mail"
                     />
                   </div>
                   <div className="form-group">
@@ -68,17 +69,18 @@ export default function Login() {
                     </label>
                     <input
                       onChange={formChange}
-                      type="text"
+                      type="password"
                       name="password"
                       id="password"
                       className="form-control"
+                      placeholder="Digite sua senha"
                     />
                   </div>
                   <button type="submit" className="btn btn-primary btn-info">
                     Entrar
                   </button>
                   <div id="register-link" className="text-right register-here">
-                    <a href="#" className="text-info" onClick={registerUser}>
+                    <a className="text-info" onClick={registerUser}>
                       Ainda não tem cadastro? Clique aqui!
                     </a>
                   </div>

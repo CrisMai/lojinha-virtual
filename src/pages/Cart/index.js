@@ -33,14 +33,14 @@ export default function Cart() {
             <i className="fa fa-trash fa-1x" />
           </button>
         </div> : ''}
-        <div className="row">
+        <div className="container">
           {cart.length === 0 ? (
             <p className="col-sm-12 mt-5 text-warning text-center">
               Sem produtos no Carrinho...
             </p>
           ) : (
             <React.Fragment>
-              <table className="table table-sm table-striped container">
+              <table className="table table-sm table-striped">
                 <thead>
                   <tr className="table-active">
                     <th scope="col"></th>

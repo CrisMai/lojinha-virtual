@@ -1,5 +1,12 @@
 
 
+  #login .container #login-row #login-column #login-box #login-form{
+	max-width: 600px;
+	height: auto;
+	border: 1px solid #9C9C9C;
+	background-color: rgb(233, 124, 124);
+  }
+
 .btn-info {
     border-color: #3cefff;
 	color: black;
@@ -9,10 +16,6 @@
     background-repeat: no-repeat;
 }
 
-.mt {
-	margin-top: 15%;
-}
-
 .register-here {
 	margin-top: 10px !important;
 	cursor: pointer;
@@ -20,8 +23,11 @@
 
 .message-login {
 	position: absolute;
-	width: 100%;
+	width: 95%;
+	margin-top: -20%;
 }
+
+
 
 
 

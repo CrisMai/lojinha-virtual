@@ -44,10 +44,10 @@ export default function Login() {
             className="row justify-content-center align-items-center"
           >
             <div id="login-column" className="col-md-6 mt">
+              <div id="login-box" className="col-md-12">
                   {message ? <div className="alert alert-danger message-login" role="alert">
                     Email e/ou senha incorretos!
                   </div> : ''}
-              <div id="login-box" className="col-md-12">
                 <form id="login-form" className="form" action="" method="post" onSubmit={login}>
                   <h3 className="text-center text-info">Login</h3>
                   <div className="form-group">
@@ -59,7 +59,7 @@ export default function Login() {
                       type="text"
                       name="email"
                       id="email"
-                      className="form-control"
+                      className="form-control padding"
                       placeholder="Digite seu e-mail"
                     />
                   </div>

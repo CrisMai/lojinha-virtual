@@ -24,13 +24,13 @@ export default function Cart() {
     <React.Fragment>
       <Header />
       <div className="container-fluid">
-        {cart.length > 0 ? <div className="remove-all">
+        {cart.length > 0 ? <div className="remove-all justify-rigth">
           <label className="text-warning" >Remover todos os produtos</label>
           <button
             onClick={() => removeAll()}
             className="btn btn-primary btn-remove-all"
           >
-            <i className="fa fa-trash fa-2x" />
+            <i className="fa fa-trash fa-1x" />
           </button>
         </div> : ''}
         <div className="row">
@@ -40,13 +40,24 @@ export default function Cart() {
             </p>
           ) : (
             <React.Fragment>
-              {cart.map((item) => (
-                <ItemCart
-                  key={item.id}
-                  item={item}
-                  removeItemCarrinho={removeItemCart}
-                />
-              ))}
+              <table className="table table-sm table-striped container">
+                <thead>
+                  <tr className="table-active">
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                {cart.map((item) => (
+                  <ItemCart
+                    key={item.id}
+                    item={item}
+                    removeItemCarrinho={removeItemCart}
+                  />
+                ))}
+              </table>
             </React.Fragment>
           )}
         </div>

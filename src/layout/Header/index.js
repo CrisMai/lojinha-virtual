@@ -21,11 +21,6 @@ export default function Header() {
 							Produtos
 						</NavLink>
 					</li>
-					<li className="nav-item">
-						<NavLink to="/add" activeClassName="active" className="nav-link header">
-							Adicionar
-						</NavLink>
-					</li>
 				</ul>
 			</div>
 			<ul className="navbar-nav ml-md-auto">

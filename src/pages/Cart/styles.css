@@ -1,8 +1,12 @@
 .remove-all {
     margin-top: 10px;
-    color: green;
+    float: right;
 }
 
 .btn-remove-all {
     margin-left: 10px;
+}
+
+.table {
+    margin-top: 25px;
 }

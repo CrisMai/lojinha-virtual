@@ -16,7 +16,7 @@ export default function Login() {
     e.preventDefault();
     console.log("login()")
     console.log(form);
-    if (form.email === "teste1" && form.password === "teste2") {
+    if (form.email === "teste@teste" && form.password === "teste") {
       console.log(form.email)
       console.log(form.password)
       console.log("Login Ok !")
@@ -44,10 +44,10 @@ export default function Login() {
             className="row justify-content-center align-items-center"
           >
             <div id="login-column" className="col-md-6 mt">
+                  {message ? <div className="alert alert-danger message-login" role="alert">
+                    Email e/ou senha incorretos!
+                  </div> : ''}
               <div id="login-box" className="col-md-12">
-              {message ? <div className="alert alert-danger message-login" role="alert">
-                Email e/ou senha incorretos!
-              </div> : ''}
                 <form id="login-form" className="form" action="" method="post" onSubmit={login}>
                   <h3 className="text-center text-info">Login</h3>
                   <div className="form-group">

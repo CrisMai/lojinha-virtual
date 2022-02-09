@@ -10,18 +10,17 @@
 }
 
 .mt {
-	margin-top: 15%;
+	margin-top: 20%;
 }
 
 .message-restier-user {
 	position: absolute;
 	margin-top: -20%;
 	width: 95%;
-	background-color:yellowgreen;
 }
 
 .register-user {
-	margin-top: -15px;
+	margin-top: -5%;
 }
 
 .btn-back {

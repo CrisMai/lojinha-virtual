@@ -144,7 +144,7 @@ export default function RegisterUser() {
                       id="password"
                       className="form-control"
                       value={form.password}
-                      minlength="8"
+                      minLength="6"
                       placeholder="Digite sua senha"
                       required
                     />
